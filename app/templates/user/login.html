@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+    <h1 class="h3 mb-3 font-weight-normal">Login</h1>
+
+    {% if error != None %}
+    <div class="alert alert-danger" role="alert">{{error}}</div>
+    {% endif %}
+
+    <br>
+
+
+        <form method='post' action='login_submit'>
+        <div class="form-group">
+        <label>Username:</label>
+        <input class="form-control" type='text' name='username' value='{{username if username != None}}' required>
+        </div>
+
+        <div class="form-group">
+        <label>Password:</label>
+        <input class="form-control" type='password' name='password' required>
+        </div>
+
+        <input type='submit' class="btn btn-success btn-lg " value='Submit'>
+        </form>
+
+    <br><br>
+    <form method='post' action='new_user'>
+        <label>New User?</label>
+        <input type='submit' class="btn btn-link btn-sm" value='Create Account'>
+    </form>
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <form action="{{url_for('thumbnails',id=id)}}" method="get">
+        <input type="submit" value="Back">
+    </form>
+
+  {% for row in cursor %}
+        <img src = '{{row[0]}}'>
+  {% endfor %}
+
+      <form action="{{url_for('image_delete',id=id, photo_id=photo_id)}}" method="post">
+        <input type="submit" value="Delete">
+    </form>
+
+{% endblock %}
