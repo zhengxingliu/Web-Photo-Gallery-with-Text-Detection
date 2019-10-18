@@ -1,6 +1,7 @@
 from flask import render_template, request, session, url_for, redirect, g, jsonify
 from app import webapp
 from app.config import db_config
+from datetime import timedelta
 import mysql.connector
 import hashlib, random
 
@@ -73,6 +74,7 @@ def login_submit():
 
     if new_hash == hash:
         session['authenticated'] = True
+        session.permanent = True
         session['username'] = username
         session['user_id'] = user_id
         return redirect(url_for('thumbnails',id=user_id))

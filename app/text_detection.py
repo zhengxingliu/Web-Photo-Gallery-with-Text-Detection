@@ -2,37 +2,20 @@
 # import the necessary packages
 from imutils.object_detection import non_max_suppression
 import numpy as np
-#import argparse
 import time
 import cv2
 
 def text_detection(input_image,save_path):
 #def text_detection(input_image):
 
-    # # construct the argument parser and parse the arguments
-    # ap = argparse.ArgumentParser()
-    # ap.add_argument("-i", "--image", type=str,
-    #                 help="path to input image")
-    # ap.add_argument("-east", "--east", type=str,
-    #                 help="path to input EAST text detector")
-    # ap.add_argument("-c", "--min-confidence", type=float, default=0.5,
-    #                 help="minimum probability required to inspect a region")
-    # ap.add_argument("-w", "--width", type=int, default=320,
-    #                 help="resized image width (should be multiple of 32)")
-    # ap.add_argument("-e", "--height", type=int, default=320,
-    #                 help="resized image height (should be multiple of 32)")
-    # args = vars(ap.parse_args())
-
     # load the input image and grab the image dimensions
     image = cv2.imread(input_image)
-    #image = cv2.imread(args["image"])
     orig = image.copy()
     (H, W) = image.shape[:2]
 
     # set the new width and height and then determine the ratio in change
     # for both the width and height
     (newW, newH) = (320,320)
-    #(newW, newH) = (args["width"], args["height"])
     rW = W / float(newW)
     rH = H / float(newH)
 
@@ -88,7 +71,6 @@ def text_detection(input_image,save_path):
             # if our score does not have sufficient probability, ignore it
             min_confidence = 0.5
             if scoresData[x] < min_confidence:
-            #if scoresData[x] < args["min_confidence"]:
                 continue
 
             # compute the offset factor as our resulting feature maps will
@@ -134,21 +116,8 @@ def text_detection(input_image,save_path):
         # draw the bounding box on the image
         cv2.rectangle(orig, (startX, startY), (endX, endY), (0, 255, 0), 2)
 
-    # show the output image
-    # cv2.imshow("Text Detection", orig)
-    # cv2.waitKey(0)
-
-    # #save image to new file
-    # fname = input_image.split('.')
-    # fname = fname[-2] + '_TextDetection.jpg'
-    # # fname = fname[-2].split('/')
-    # # fname = fname[-1]+ '_text.jpg'
-    #
-    # print(fname)
-    # cv2.imwrite(fname,orig)
-
+    # save modified photo to path
     cv2.imwrite(save_path,orig)
 
-#text_detection('images/lebron_james.jpg')
 
 
