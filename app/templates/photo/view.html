@@ -1,16 +1,29 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <form action="{{url_for('thumbnails',id=id)}}" method="get">
-        <input type="submit" value="Back">
-    </form>
+    <div class="row">
+        <div class = "col-12 col-sm-1">
+            <form action="{{url_for('thumbnails',id=id)}}" method="get">
+                <input type="submit" class="btn btn-link " value="Back">
+            </form>
+        </div>
+
+        <div class = "col-12 col-sm-3">
+            <form action="{{url_for('image_delete',id=id, photo_id=photo_id)}}" method="post">
+                <input type="submit" class="btn btn-light" value="Delete">
+            </form>
+        </div>
+
+    </div>
+
+    <br>
+
+
 
   {% for row in cursor %}
         <img src = '{{row[0]}}'>
   {% endfor %}
 
-      <form action="{{url_for('image_delete',id=id, photo_id=photo_id)}}" method="post">
-        <input type="submit" value="Delete">
-    </form>
+
 
 {% endblock %}
