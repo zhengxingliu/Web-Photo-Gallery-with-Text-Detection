@@ -5,8 +5,11 @@
     <form action="{{url_for('image_upload',id=id)}}" method="get">
         <input type="submit" class="btn btn-outline-primary" value="Upload Photo">
     </form>
-    <br><br>
+    <br>
 
+    <p>Upload image to perform text detection</p>
+    <P>Click on thumbnail to view full sized photos</P>
+    <br>
 
     <table>
         {% for row in cursor %}
