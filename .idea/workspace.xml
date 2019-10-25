@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="b08dd5f8-ed54-4212-b019-ad419dc8eaa2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/photo/thumbnail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/photo/thumbnail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_database.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/a1_database.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a1_database.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/a1_database.mwb.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/photo/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/photo/view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/user/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/user/login.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -138,7 +138,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
