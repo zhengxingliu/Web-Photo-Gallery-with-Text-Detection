@@ -1,6 +1,5 @@
-# ece1779_a1
+# Web Photo Gallery with Text Detection
 
-web application using Python, Flask and MySql, running on AWS EC2
->>
-A photo gallary performing text detection. User can upload photos and browse their own photo gallary. Text detected in photos will be marked out
-
+* Web application using Python, Flask and MySQL
+* User can upload photos and browse their own gallery
+* Detected text area in photos will be marked out
